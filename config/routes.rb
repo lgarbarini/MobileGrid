@@ -55,4 +55,7 @@ MobileGrid::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  match '/test',  :to => 'jobs#get'
+  match '/update', :to => 'jobs#update'
+  resources :tasks, :path => "/tasks", :controller => "tasks"
 end

@@ -1,16 +1,14 @@
 class JobsController < ApplicationController
-  def new
-      @job = Job.new
-    render :layout => "application"
-  end
-
   def index
-    @job = Job.all
+    @task = task.find(params[:task_id])
+    @active_jobs = @task.jobs.where(:status => "1")
+    @complete_jobs = @task.jobs.where(:status => "2")
     @title = "job list"
   end
 
   def get
     @job = Job.where(:status => "0").first
+    @task = Task.find(@job.task_id)
   end
   
   def show
@@ -18,7 +16,7 @@ class JobsController < ApplicationController
   end
   
   def update
-    @node = Node.find(params[:nodesession_id])
+    @node = Node.find(params[:node_session_id])
     @job = Job.find(params[:id])
     if @job.update_attributes(params[:job])
       @job.status = "2"
