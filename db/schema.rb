@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130124202457) do
+ActiveRecord::Schema.define(:version => 20130201065755) do
 
   create_table "jobs", :force => true do |t|
     t.string   "data"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130124202457) do
     t.integer  "node_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "error"
   end
 
   create_table "nodes", :force => true do |t|

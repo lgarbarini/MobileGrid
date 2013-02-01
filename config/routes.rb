@@ -58,4 +58,5 @@ MobileGrid::Application.routes.draw do
   match '/test',  :to => 'jobs#get'
   match '/update', :to => 'jobs#update'
   resources :tasks, :path => "/tasks", :controller => "tasks"
+  resources :jobs, :path => "/jobs", :controller => "jobs"
 end
