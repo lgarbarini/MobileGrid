@@ -1,14 +1,24 @@
-A Robust Grid Computing Architecture on Heterogeneous Mobile Devices for Scientific Computing
+#A Robust Grid Computing Architecture on Heterogeneous Mobile Devices for Scientific Computing
+This project was part of the BVSD Regional Science Fair competition and the final project board is present in the /Board directory.
 
 The following code is licensed under the Creative Commons Attribution-ShareAlike 4.0. The text is below.
 
-Executive Summary: This project demonstrates a novel software program that allows the distribution of complex computations over many mobile devices. This software leverages new mobile technologies and differs substantially from many current approaches so that it can run efficiently on less powerful mobile devices. Many tests were run that show the advantages of this software over a single device or even a single traditional computer. The results of this research have huge potential in places where traditional computers are not as viable.
+feel free to contact me at **mobilegrid [at] logangarbarini.com**
+
+##Executive Summary: 
+This project demonstrates a novel software program that allows the distribution of complex computations over many mobile devices. This software leverages new mobile technologies and differs substantially from many current approaches so that it can run efficiently on less powerful mobile devices. Many tests were run that show the advantages of this software over a single device or even a single traditional computer. The results of this research have huge potential in places where traditional computers are not as viable.
 
 
-Abstract:
+##Abstract:
 As the world moves away from traditional computing environments, distributed computingprojects will need to adjust to the new environment. Instead of traditional x86 based devices there will be a cornucopia of different devices and operating systems that will need to be supported. Additionally, grid computing software will have to be able to withstand more unpredictable environments including high latency and battery constraints. This project demonstrates a novel grid computing architecture which allows distribution of complex computations over many mobile devices. This software leverages new mobile technologies and differs substantially from many current approaches so that it can run efficiently on less powerful mobile devices. Stateless connection methods were used to minimize bandwidth and power consumption. The project demonstrates its real-world capabilities in a congested network environment on actual Android devices. This demonstration cluster was given a numerical integration task that breaks down a the integration into small jobs and distributes them among the worker devices. The results of the research show clear advantages to connecting multiple mobile devices together compared to a single device. Lastly, the research predicts that only a handful of mobile devices would be required to have greater processing power than a standard laptop computer. Many tests were run that show the advantages of this software over a single device or even a single traditional computer. The results of this research have huge potential in places where traditional computers are not as viable.
 
-Creative Commons Attribution-ShareAlike 4.0 International Public License
+
+##Notes
+-The log files from the data run can be accessed in the /Rails App/log directory
+-The Simpson's Rule progam was taken from a course website as clarified by the comments
+-Any borrowed code should be denoted by a comment
+
+##Creative Commons Attribution-ShareAlike 4.0 International Public License
 
 By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License ("Public License"). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.
 
