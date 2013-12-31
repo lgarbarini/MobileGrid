@@ -1,0 +1,11 @@
+<%= form_for (@task) do |f| %>
+  <div class="field">
+    <%= f.label :code %>
+    <%= f.text_area :code %>
+  </div>
+  <div class="field">
+    <%= f.label :data %>
+    <%= f.text_field :data %>
+  </div>
+ <%= f.submit "Submit", :disable_with => 'Submitting...' %>
+<% end %>

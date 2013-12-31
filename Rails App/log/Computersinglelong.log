@@ -1,0 +1,1208 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:39 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.9ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:39.525422' WHERE "jobs"."id" = 402
+  [1m[36m (23.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 124ms (Views: 2.0ms | ActiveRecord: 27.1ms)
+
+
+Started PUT "/jobs/402" for 192.168.2.2 at 2013-02-25 21:51:40 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.65235030919154", "error"=>"0"}, "id"=>"402"}
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "402"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.65235030919154', "error" = 0, "updated_at" = '2013-02-26 04:51:40.396522' WHERE "jobs"."id" = 402
+  [1m[36m (42.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:40.442187' WHERE "jobs"."id" = 402[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:40 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:40.501160' WHERE "jobs"."id" = 403
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/jobs/403" for 192.168.2.2 at 2013-02-25 21:51:41 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.813771102248653", "error"=>"0"}, "id"=>"403"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "403"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.813771102248653', "error" = 0, "updated_at" = '2013-02-26 04:51:41.019963' WHERE "jobs"."id" = 403
+  [1m[36m (41.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:41.064082' WHERE "jobs"."id" = 403[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 44.1ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:41 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:41.080504' WHERE "jobs"."id" = 404
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/jobs/404" for 192.168.2.2 at 2013-02-25 21:51:41 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.885408373880006", "error"=>"0"}, "id"=>"404"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "404"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.885408373880006', "error" = 0, "updated_at" = '2013-02-26 04:51:41.599125' WHERE "jobs"."id" = 404
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:41.609743' WHERE "jobs"."id" = 404[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:41 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:41.622435' WHERE "jobs"."id" = 405
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/405" for 192.168.2.2 at 2013-02-25 21:51:42 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.85844416900229", "error"=>"0"}, "id"=>"405"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "405"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.85844416900229', "error" = 0, "updated_at" = '2013-02-26 04:51:42.128084' WHERE "jobs"."id" = 405
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:42.142119' WHERE "jobs"."id" = 405[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:42 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:42.160233' WHERE "jobs"."id" = 406
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 1.4ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/jobs/406" for 192.168.2.2 at 2013-02-25 21:51:42 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.739000383770778", "error"=>"0"}, "id"=>"406"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "406"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.739000383770778', "error" = 0, "updated_at" = '2013-02-26 04:51:42.668231' WHERE "jobs"."id" = 406
+  [1m[36m (37.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:42.708616' WHERE "jobs"."id" = 406[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:42 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:42.725366' WHERE "jobs"."id" = 407
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/jobs/407" for 192.168.2.2 at 2013-02-25 21:51:43 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.599194891448176", "error"=>"0"}, "id"=>"407"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "407"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "result" = '8.599194891448176', "error" = 0, "updated_at" = '2013-02-26 04:51:43.222802' WHERE "jobs"."id" = 407
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:43.226773' WHERE "jobs"."id" = 407[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:43 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:43.240822' WHERE "jobs"."id" = 408
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/jobs/408" for 192.168.2.2 at 2013-02-25 21:51:43 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.751136629362135", "error"=>"0"}, "id"=>"408"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "408"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.751136629362135', "error" = 0, "updated_at" = '2013-02-26 04:51:43.707460' WHERE "jobs"."id" = 408
+  [1m[36m (32.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:43.742058' WHERE "jobs"."id" = 408[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:43 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:43.795919' WHERE "jobs"."id" = 409
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/jobs/409" for 192.168.2.2 at 2013-02-25 21:51:44 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.86401541672321", "error"=>"0"}, "id"=>"409"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "409"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.86401541672321', "error" = 0, "updated_at" = '2013-02-26 04:51:44.294454' WHERE "jobs"."id" = 409
+  [1m[36m (34.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:44.331606' WHERE "jobs"."id" = 409[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 41ms (Views: 0.1ms | ActiveRecord: 36.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:44 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:44.348168' WHERE "jobs"."id" = 410
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/jobs/410" for 192.168.2.2 at 2013-02-25 21:51:44 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.8833077558959", "error"=>"0"}, "id"=>"410"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "410"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.8833077558959', "error" = 0, "updated_at" = '2013-02-26 04:51:44.822534' WHERE "jobs"."id" = 410
+  [1m[36m (52.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:44.877348' WHERE "jobs"."id" = 410[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 200 OK in 59ms (Views: 0.1ms | ActiveRecord: 54.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:44 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:44.890081' WHERE "jobs"."id" = 411
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/411" for 192.168.2.2 at 2013-02-25 21:51:45 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.804537487374239", "error"=>"0"}, "id"=>"411"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "411"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.804537487374239', "error" = 0, "updated_at" = '2013-02-26 04:51:45.354821' WHERE "jobs"."id" = 411
+  [1m[36m (29.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:45.386391' WHERE "jobs"."id" = 411[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 36ms (Views: 0.1ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:45 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:45.399395' WHERE "jobs"."id" = 412
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/jobs/412" for 192.168.2.2 at 2013-02-25 21:51:45 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.636244458660858", "error"=>"0"}, "id"=>"412"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "412"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.636244458660858', "error" = 0, "updated_at" = '2013-02-26 04:51:45.882778' WHERE "jobs"."id" = 412
+  [1m[36m (45.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:45.930939' WHERE "jobs"."id" = 412[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 47.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:45 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:45.945836' WHERE "jobs"."id" = 413
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/jobs/413" for 192.168.2.2 at 2013-02-25 21:51:46 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.669386593028447", "error"=>"0"}, "id"=>"413"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "413"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.669386593028447', "error" = 0, "updated_at" = '2013-02-26 04:51:46.449558' WHERE "jobs"."id" = 413
+  [1m[36m (36.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:46.488489' WHERE "jobs"."id" = 413[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:46 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:46.508316' WHERE "jobs"."id" = 414
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 2.2ms | ActiveRecord: 5.2ms)
+
+
+Started PUT "/jobs/414" for 192.168.2.2 at 2013-02-25 21:51:47 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.82250986193003", "error"=>"0"}, "id"=>"414"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "414"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.82250986193003', "error" = 0, "updated_at" = '2013-02-26 04:51:47.041561' WHERE "jobs"."id" = 414
+  [1m[36m (27.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:47.071353' WHERE "jobs"."id" = 414[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:47 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:47.087021' WHERE "jobs"."id" = 415
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/jobs/415" for 192.168.2.2 at 2013-02-25 21:51:47 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.886911586839197", "error"=>"0"}, "id"=>"415"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "415"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.886911586839197', "error" = 0, "updated_at" = '2013-02-26 04:51:47.596808' WHERE "jobs"."id" = 415
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:47.600871' WHERE "jobs"."id" = 415[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:47 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:47.621962' WHERE "jobs"."id" = 416
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/jobs/416" for 192.168.2.2 at 2013-02-25 21:51:48 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.852320722931013", "error"=>"0"}, "id"=>"416"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "416"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.852320722931013', "error" = 0, "updated_at" = '2013-02-26 04:51:48.126952' WHERE "jobs"."id" = 416
+  [1m[36m (24.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:48.153002' WHERE "jobs"."id" = 416[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:48 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:48.167876' WHERE "jobs"."id" = 417
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/jobs/417" for 192.168.2.2 at 2013-02-25 21:51:48 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.726349255142507", "error"=>"0"}, "id"=>"417"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "417"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.726349255142507', "error" = 0, "updated_at" = '2013-02-26 04:51:48.665090' WHERE "jobs"."id" = 417
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:48.676425' WHERE "jobs"."id" = 417[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:48 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:48.691196' WHERE "jobs"."id" = 418
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/418" for 192.168.2.2 at 2013-02-25 21:51:49 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.601595748279648", "error"=>"0"}, "id"=>"418"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "418"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.601595748279648', "error" = 0, "updated_at" = '2013-02-26 04:51:49.145831' WHERE "jobs"."id" = 418
+  [1m[36m (27.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:49.175392' WHERE "jobs"."id" = 418[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:49 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:49.191959' WHERE "jobs"."id" = 419
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/jobs/419" for 192.168.2.2 at 2013-02-25 21:51:49 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.762780326615024", "error"=>"0"}, "id"=>"419"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "419"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.762780326615024', "error" = 0, "updated_at" = '2013-02-26 04:51:49.679874' WHERE "jobs"."id" = 419
+  [1m[36m (38.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:49.719755' WHERE "jobs"."id" = 419[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 200 OK in 44ms (Views: 0.1ms | ActiveRecord: 39.9ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:49 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:49.771242' WHERE "jobs"."id" = 420
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/jobs/420" for 192.168.2.2 at 2013-02-25 21:51:50 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.869026473149326", "error"=>"0"}, "id"=>"420"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "420"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.869026473149326', "error" = 0, "updated_at" = '2013-02-26 04:51:50.247267' WHERE "jobs"."id" = 420
+  [1m[36m (49.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:50.298640' WHERE "jobs"."id" = 420[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 51.1ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:50 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:50.312576' WHERE "jobs"."id" = 421
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/jobs/421" for 192.168.2.2 at 2013-02-25 21:51:50 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.880613237059373", "error"=>"0"}, "id"=>"421"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "421"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.880613237059373', "error" = 0, "updated_at" = '2013-02-26 04:51:50.778163' WHERE "jobs"."id" = 421
+  [1m[36m (39.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:50.819815' WHERE "jobs"."id" = 421[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:50 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:50.835365' WHERE "jobs"."id" = 422
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/jobs/422" for 192.168.2.2 at 2013-02-25 21:51:51 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.794815112233628", "error"=>"0"}, "id"=>"422"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "422"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.794815112233628', "error" = 0, "updated_at" = '2013-02-26 04:51:51.330532' WHERE "jobs"."id" = 422
+  [1m[36m (22.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:51.355177' WHERE "jobs"."id" = 422[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:51 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:51.367786' WHERE "jobs"."id" = 423
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/423" for 192.168.2.2 at 2013-02-25 21:51:51 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.623585013296868", "error"=>"0"}, "id"=>"423"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "423"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.623585013296868', "error" = 0, "updated_at" = '2013-02-26 04:51:51.866608' WHERE "jobs"."id" = 423
+  [1m[36m (39.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:51.908789' WHERE "jobs"."id" = 423[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 47ms (Views: 0.1ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:51 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:51.925052' WHERE "jobs"."id" = 424
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/424" for 192.168.2.2 at 2013-02-25 21:51:52 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.684834220477853", "error"=>"0"}, "id"=>"424"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "424"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.684834220477853', "error" = 0, "updated_at" = '2013-02-26 04:51:52.402033' WHERE "jobs"."id" = 424
+  [1m[36m (48.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:52.453216' WHERE "jobs"."id" = 424[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 50.8ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:52 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:52.466862' WHERE "jobs"."id" = 425
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/jobs/425" for 192.168.2.2 at 2013-02-25 21:51:52 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.830744492127932", "error"=>"0"}, "id"=>"425"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "425"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.830744492127932', "error" = 0, "updated_at" = '2013-02-26 04:51:52.966143' WHERE "jobs"."id" = 425
+  [1m[36m (18.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:52.986696' WHERE "jobs"."id" = 425[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:52 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:53.004214' WHERE "jobs"."id" = 426
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/jobs/426" for 192.168.2.2 at 2013-02-25 21:51:53 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.887814481661662", "error"=>"0"}, "id"=>"426"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "426"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.887814481661662', "error" = 0, "updated_at" = '2013-02-26 04:51:53.456602' WHERE "jobs"."id" = 426
+  [1m[36m (27.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:53.486715' WHERE "jobs"."id" = 426[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:53 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:53.499302' WHERE "jobs"."id" = 427
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/jobs/427" for 192.168.2.2 at 2013-02-25 21:51:53 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.845654799617611", "error"=>"0"}, "id"=>"427"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "427"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.845654799617611', "error" = 0, "updated_at" = '2013-02-26 04:51:53.953150' WHERE "jobs"."id" = 427
+  [1m[36m (31.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:53.986296' WHERE "jobs"."id" = 427[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:53 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:53.999296' WHERE "jobs"."id" = 428
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/jobs/428" for 192.168.2.2 at 2013-02-25 21:51:54 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.713148833125405", "error"=>"0"}, "id"=>"428"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "428"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.713148833125405', "error" = 0, "updated_at" = '2013-02-26 04:51:54.472410' WHERE "jobs"."id" = 428
+  [1m[36m (56.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:54.531137' WHERE "jobs"."id" = 428[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 63ms (Views: 0.1ms | ActiveRecord: 58.8ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:54 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:54.543786' WHERE "jobs"."id" = 429
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/429" for 192.168.2.2 at 2013-02-25 21:51:54 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.60642038860809", "error"=>"0"}, "id"=>"429"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "429"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.60642038860809', "error" = 0, "updated_at" = '2013-02-26 04:51:55.002825' WHERE "jobs"."id" = 429
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:55.030873' WHERE "jobs"."id" = 429[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:55 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:55.043371' WHERE "jobs"."id" = 430
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/jobs/430" for 192.168.2.2 at 2013-02-25 21:51:55 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.773941345339713", "error"=>"0"}, "id"=>"430"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "430"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.773941345339713', "error" = 0, "updated_at" = '2013-02-26 04:51:55.497471' WHERE "jobs"."id" = 430
+  [1m[36m (31.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:55.531080' WHERE "jobs"."id" = 430[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 38ms (Views: 0.1ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:55 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:55.583467' WHERE "jobs"."id" = 431
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started PUT "/jobs/431" for 192.168.2.2 at 2013-02-25 21:51:56 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.873468660703107", "error"=>"0"}, "id"=>"431"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "431"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.873468660703107', "error" = 0, "updated_at" = '2013-02-26 04:51:56.041428' WHERE "jobs"."id" = 431
+  [1m[36m (32.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:56.075324' WHERE "jobs"."id" = 431[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 200 OK in 38ms (Views: 0.1ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:56 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:56.088351' WHERE "jobs"."id" = 432
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/jobs/432" for 192.168.2.2 at 2013-02-25 21:51:56 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.877329830713556", "error"=>"0"}, "id"=>"432"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "432"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.877329830713556', "error" = 0, "updated_at" = '2013-02-26 04:51:56.545432' WHERE "jobs"."id" = 432
+  [1m[36m (28.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:56.576162' WHERE "jobs"."id" = 432[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:56 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:56.592827' WHERE "jobs"."id" = 433
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/jobs/433" for 192.168.2.2 at 2013-02-25 21:51:57 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.784610529476794", "error"=>"0"}, "id"=>"433"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "433"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.784610529476794', "error" = 0, "updated_at" = '2013-02-26 04:51:57.046500' WHERE "jobs"."id" = 433
+  [1m[36m (27.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:57.076609' WHERE "jobs"."id" = 433[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:57 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:57.089719' WHERE "jobs"."id" = 434
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/jobs/434" for 192.168.2.2 at 2013-02-25 21:51:57 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.613710202033587", "error"=>"0"}, "id"=>"434"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "434"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "result" = '8.613710202033587', "error" = 0, "updated_at" = '2013-02-26 04:51:57.559882' WHERE "jobs"."id" = 434
+  [1m[36m (45.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:57.608576' WHERE "jobs"."id" = 434[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 53ms (Views: 0.2ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:57 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:57.622962' WHERE "jobs"."id" = 435
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/jobs/435" for 192.168.2.2 at 2013-02-25 21:51:58 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.699357463592696", "error"=>"0"}, "id"=>"435"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "435"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.699357463592696', "error" = 0, "updated_at" = '2013-02-26 04:51:58.079314' WHERE "jobs"."id" = 435
+  [1m[36m (27.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:58.108789' WHERE "jobs"."id" = 435[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:58 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:58.121269' WHERE "jobs"."id" = 436
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/436" for 192.168.2.2 at 2013-02-25 21:51:58 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.838465665622724", "error"=>"0"}, "id"=>"436"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "436"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.838465665622724', "error" = 0, "updated_at" = '2013-02-26 04:51:58.580817' WHERE "jobs"."id" = 436
+  [1m[36m (25.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:58.608664' WHERE "jobs"."id" = 436[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:58 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:58.663241' WHERE "jobs"."id" = 437
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/jobs/437" for 192.168.2.2 at 2013-02-25 21:51:59 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.888115378153065", "error"=>"0"}, "id"=>"437"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "437"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.888115378153065', "error" = 0, "updated_at" = '2013-02-26 04:51:59.115925' WHERE "jobs"."id" = 437
+  [1m[36m (24.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:59.142121' WHERE "jobs"."id" = 437[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:59 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:59.155536' WHERE "jobs"."id" = 438
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/jobs/438" for 192.168.2.2 at 2013-02-25 21:51:59 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.838456061558905", "error"=>"0"}, "id"=>"438"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "438"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.838456061558905', "error" = 0, "updated_at" = '2013-02-26 04:51:59.620659' WHERE "jobs"."id" = 438
+  [1m[36m (30.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:51:59.653200' WHERE "jobs"."id" = 438[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 200 OK in 37ms (Views: 0.2ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:51:59 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:51:59.667778' WHERE "jobs"."id" = 439
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/jobs/439" for 192.168.2.2 at 2013-02-25 21:52:00 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.699339258831154", "error"=>"0"}, "id"=>"439"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "439"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.699339258831154', "error" = 0, "updated_at" = '2013-02-26 04:52:00.131084' WHERE "jobs"."id" = 439
+  [1m[36m (31.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:00.164506' WHERE "jobs"."id" = 439[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:00 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:00.180869' WHERE "jobs"."id" = 440
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 3.1ms)
+
+
+Started PUT "/jobs/440" for 192.168.2.2 at 2013-02-25 21:52:00 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.613721223156713", "error"=>"0"}, "id"=>"440"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "440"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.613721223156713', "error" = 0, "updated_at" = '2013-02-26 04:52:00.652936' WHERE "jobs"."id" = 440
+  [1m[36m (53.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:00.708722' WHERE "jobs"."id" = 440[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 60ms (Views: 0.1ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:00 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:00.721333' WHERE "jobs"."id" = 441
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/441" for 192.168.2.2 at 2013-02-25 21:52:01 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.784623974774586", "error"=>"0"}, "id"=>"441"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "441"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.784623974774586', "error" = 0, "updated_at" = '2013-02-26 04:52:01.178284' WHERE "jobs"."id" = 441
+  [1m[36m (28.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:01.209131' WHERE "jobs"."id" = 441[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:01 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:01.258620' WHERE "jobs"."id" = 442
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 44ms (Views: 1.0ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/jobs/442" for 192.168.2.2 at 2013-02-25 21:52:01 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.877334434742739", "error"=>"0"}, "id"=>"442"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "442"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.877334434742739', "error" = 0, "updated_at" = '2013-02-26 04:52:01.717885' WHERE "jobs"."id" = 442
+  [1m[36m (33.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:01.753105' WHERE "jobs"."id" = 442[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:01 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:01.766941' WHERE "jobs"."id" = 443
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/443" for 192.168.2.2 at 2013-02-25 21:52:02 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.873463313638245", "error"=>"0"}, "id"=>"443"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "443"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.873463313638245', "error" = 0, "updated_at" = '2013-02-26 04:52:02.244418' WHERE "jobs"."id" = 443
+  [1m[36m (40.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:02.286566' WHERE "jobs"."id" = 443[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:02 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:02.302246' WHERE "jobs"."id" = 444
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/jobs/444" for 192.168.2.2 at 2013-02-25 21:52:02 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.773927288993526", "error"=>"0"}, "id"=>"444"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "444"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.773927288993526', "error" = 0, "updated_at" = '2013-02-26 04:52:02.773210' WHERE "jobs"."id" = 444
+  [1m[36m (44.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:02.820046' WHERE "jobs"."id" = 444[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 46.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:02 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:02.835634' WHERE "jobs"."id" = 445
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/jobs/445" for 192.168.2.2 at 2013-02-25 21:52:03 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.606412603562486", "error"=>"0"}, "id"=>"445"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "445"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.606412603562486', "error" = 0, "updated_at" = '2013-02-26 04:52:03.297864' WHERE "jobs"."id" = 445
+  [1m[36m (55.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:03.355510' WHERE "jobs"."id" = 445[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 62ms (Views: 0.2ms | ActiveRecord: 57.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:03 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:03.372027' WHERE "jobs"."id" = 446
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/446" for 192.168.2.2 at 2013-02-25 21:52:03 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.713166198244355", "error"=>"0"}, "id"=>"446"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "446"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.713166198244355', "error" = 0, "updated_at" = '2013-02-26 04:52:03.851125' WHERE "jobs"."id" = 446
+  [1m[36m (22.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:03.875961' WHERE "jobs"."id" = 446[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:03 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:03.891449' WHERE "jobs"."id" = 447
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/jobs/447" for 192.168.2.2 at 2013-02-25 21:52:04 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.845663730206535", "error"=>"0"}, "id"=>"447"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "447"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.845663730206535', "error" = 0, "updated_at" = '2013-02-26 04:52:04.364651' WHERE "jobs"."id" = 447
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:04.367819' WHERE "jobs"."id" = 447[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:04 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:04.424852' WHERE "jobs"."id" = 448
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 2.3ms)
+
+
+Started PUT "/jobs/448" for 192.168.2.2 at 2013-02-25 21:52:04 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.887813709793633", "error"=>"0"}, "id"=>"448"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "448"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.887813709793633', "error" = 0, "updated_at" = '2013-02-26 04:52:04.901364' WHERE "jobs"."id" = 448
+  [1m[36m (16.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:04.920367' WHERE "jobs"."id" = 448[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:04 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:04.934096' WHERE "jobs"."id" = 449
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/449" for 192.168.2.2 at 2013-02-25 21:52:05 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.830734224330405", "error"=>"0"}, "id"=>"449"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "449"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "result" = '8.830734224330405', "error" = 0, "updated_at" = '2013-02-26 04:52:05.386544' WHERE "jobs"."id" = 449
+  [1m[36m (19.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:05.408967' WHERE "jobs"."id" = 449[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:05 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:05.421082' WHERE "jobs"."id" = 450
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/jobs/450" for 192.168.2.2 at 2013-02-25 21:52:05 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.684814998480062", "error"=>"0"}, "id"=>"450"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "450"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "jobs" SET "result" = '8.684814998480062', "error" = 0, "updated_at" = '2013-02-26 04:52:05.884779' WHERE "jobs"."id" = 450
+  [1m[36m (22.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:05.909777' WHERE "jobs"."id" = 450[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:05 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "jobs" SET "status" = 1, "updated_at" = '2013-02-26 04:52:05.930323' WHERE "jobs"."id" = 451
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/jobs/451" for 192.168.2.2 at 2013-02-25 21:52:06 -0700
+Processing by JobsController#update as HTML
+  Parameters: {"job"=>{"result"=>"8.623599452196803", "error"=>"0"}, "id"=>"451"}
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", "451"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "jobs" SET "result" = '8.623599452196803', "error" = 0, "updated_at" = '2013-02-26 04:52:06.414949' WHERE "jobs"."id" = 451
+  [1m[36m (13.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "jobs" SET "status" = 2, "success" = 't', "updated_at" = '2013-02-26 04:52:06.431813' WHERE "jobs"."id" = 451[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/get/4.json" for 192.168.2.2 at 2013-02-25 21:52:06 -0700
+Processing by JobsController#get as JSON
+  Parameters: {"task_id"=>"4", "job"=>{}}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE (status =0 AND task_id = '4') LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms)

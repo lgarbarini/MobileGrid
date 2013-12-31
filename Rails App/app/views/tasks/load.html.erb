@@ -1,0 +1,37 @@
+<h1>Results</h1>
+<p id="results"></p>
+<script>
+var contents
+function get_job() {
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "/get/"+<%= @task.id %>+".json",
+    success: function(data) {
+      contents = data;
+    },
+    async:false,
+    statusCode: {
+     404: function() {
+       alert("error");
+      }
+   }
+ });
+ return contents;
+}
+while (jQuery.isEmptyObject(get_job()) == false){
+         <%= javascript_task %>
+         var url="/jobs/"+contents.id
+         $.ajax({
+           type: "PUT",
+           dataType: "json",
+           url: url,
+           data: payload,
+           statusCode: {
+             404: function() {
+               alert("error");
+             }
+           }
+         });
+      }
+</script>
