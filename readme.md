@@ -14,8 +14,11 @@ As the world moves away from traditional computing environments, distributed com
 
 
 ##Notes
+
 -The log files from the data run can be accessed in the /Rails App/log directory
+
 -The Simpson's Rule progam was taken from a course website as clarified by the comments
+
 -Any borrowed code should be denoted by a comment
 
 ##Creative Commons Attribution-ShareAlike 4.0 International Public License
